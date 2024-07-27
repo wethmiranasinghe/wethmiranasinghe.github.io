@@ -14,6 +14,7 @@
             font-family: 'Roboto Condensed', Arial, Helvetica;
             margin: 0;
             padding: 0;
+            padding-top: 50px;
             background-color: #0f122a; /* Dark background for dark mode */
             color: #e0e0e0; /* Light text color for readability */
         }
@@ -68,16 +69,21 @@
         }
         nav {
             display: flex;
-            justify-content: right;
+            justify-content: center;
             padding: 10px;
-            background: #13173b;  /* Darker background for nav */
+            background: #13173b; /* Darker background for nav */
+            color: #e0e0e0; /* Light text color */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure the nav bar stays on top of other content */
         }
         nav a {
-            font-family: 'Roboto Condensed', sans-serif;
             color: #e0e0e0; /* Light text color */
-            margin: 0 20px;
+            margin: 0 15px;
             text-decoration: none;
-            font-weight: 700px;
+            font-weight: 700;
         }
         section {
             padding: 20px;
