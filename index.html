@@ -107,37 +107,6 @@
             border-radius: 10px;
             margin-right: 20px;
         }
-        .container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px; /* Add space between the cards */
-            margin: 20px 0; /* Vertical margin around the container */
-        }
-        
-        .card-container {
-            background-color: #0c0e20; 
-            padding: 20px;
-            margin: 10px; /* Adjusted margin for better spacing */
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.2s ease-in-out;
-            display: flex;
-            align-items: center;
-            flex: 1 1 calc(50% - 20px); /* Equal width minus margins */
-            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
-        }
-        
-        .card-container:hover {
-            transform: scale(1.02);
-        }
-        
-        .card-container img {
-            width: 150px;
-            height: auto;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
         .info {
             flex: 1;
         }
@@ -250,8 +219,7 @@ I believe in the power of hard work and am dedicated to making meaningful contri
     </section>
     <section id="leadership">
         <h2>LEADERSHIP & VOLUNTEERING</h2>
-        <div class="container">
-        <div class="card-container" onclick="location.href='https://ieee.soc.pdn.ac.lk/chapters/wie';">
+        <div class="card" onclick="location.href='https://ieee.soc.pdn.ac.lk/chapters/wie';">
             <img src="./assets/wieLogo.jpg" alt="WIEUniversityOfPeradeniya">
             <div class="info">
                 <h3>Assistant Secretary</h3>
@@ -261,7 +229,7 @@ I believe in the power of hard work and am dedicated to making meaningful contri
                 </p>
             </div>
         </div>
-        <div class="card-container" onclick="location.href='https://jiy.iesl.lk/';">
+        <div class="card" onclick="location.href='https://jiy.iesl.lk/';">
                 <img src="./assets/jiy.jpg" alt="IESL JIY">
                 <div class="info">
                     <h3>Committee Member</h3>
@@ -270,9 +238,7 @@ I believe in the power of hard work and am dedicated to making meaningful contri
                     </p>
                 </div>
         </div>
-        </div>
-        <div class="container">
-            <div class="card-container" onclick="location.href='https://www.aerogenz.com/home';">
+            <div class="card" onclick="location.href='https://www.aerogenz.com/home';">
                 <img src="./assets/aerogenz_uop_logo.jpg" alt="aerogenz_uop_logo">
                 <div class="info">
                     <h3>Membership Chair</h3>
@@ -282,7 +248,7 @@ I believe in the power of hard work and am dedicated to making meaningful contri
                     </p>
                 </div>
             </div>
-            <div class="card-container" onclick="location.href='https://rotaract.soc.pdn.ac.lk/';">
+            <div class="card" onclick="location.href='https://rotaract.soc.pdn.ac.lk/';">
                     <img src="./assets/Rota.jpg" alt="RoteractLogo">
                     <div class="info">
                         <h3>Rotaractor</h3>
@@ -292,7 +258,15 @@ I believe in the power of hard work and am dedicated to making meaningful contri
                         </p>
                     </div>
             </div>
-            </div>
+            <div class="card" onclick="location.href='https://www.sasnaka.org/';">
+                <img src="./assets/Sasnaka.png" alt="SasnakaLogo">
+                <div class="info">
+                    <h3>Volunteer</h3>
+                    <p>Sasnaka Sansada Foundation<br>
+                       Mar 2021  December 2023
+                    </p>
+                </div>
+        </div>
     </section>
     <section id="education">
         <h2>EDUCATION</h2>
