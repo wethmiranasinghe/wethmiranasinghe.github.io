@@ -27,7 +27,7 @@
             background-size: cover;
             background-position: center;
             background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
-            z-index: -1; /* Place the background behind the content */
+            z-index: 1; /* Place the background behind the content */
         }
         header img {
             width: 200px;
@@ -48,12 +48,16 @@
         }
         .social-icons {
             margin-top: 10px;
+            position: relative; /* Ensure positioning is relative within the header */
+            z-index: 2; /* Ensure icons are above other header content */
         }
         .social-icons a {
             color: #e0e0e0; /* Light icon color */
             margin: 0 10px;
             font-size: 1.5em; /* Icon size */
             text-decoration: none;
+            transition: color 0.3s; /* Smooth color transition */
+            display: inline-block; /* Ensure icons align correctly */
         }
         .social-icons a:hover {
             color: #a0a0a0; /* Change color on hover */
