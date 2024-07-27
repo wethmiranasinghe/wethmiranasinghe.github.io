@@ -111,20 +111,21 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            gap: 20px; /* Add space between the cards */
             margin: 20px 0; /* Vertical margin around the container */
         }
         
         .card-container {
             background-color: #13173b; 
             padding: 20px;
-            margin: 20px;
+            margin: 10px; /* Adjusted margin for better spacing */
             border-radius: 10px;
             cursor: pointer;
             transition: transform 0.2s ease-in-out;
             display: flex;
             align-items: center;
-            flex: 1 1 calc(50% - 40px); /* Equal width minus margins */
-            max-width: calc(50% - 40px); /* Ensure max width for better control */
+            flex: 1 1 calc(50% - 20px); /* Equal width minus margins */
+            box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
         }
         
         .card-container:hover {
