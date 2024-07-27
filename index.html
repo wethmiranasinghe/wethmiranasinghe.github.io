@@ -19,6 +19,20 @@
             padding: 10px 0;
             text-align: center;
         }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto;
+        }
+        header h1 {
+            margin: 10px 0 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
         nav {
             display: flex;
             justify-content: center;
@@ -36,13 +50,25 @@
         footer {
             text-align: center;
             padding: 10px;
-            background: #333;
+            background: #001044;
             color: #fff;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+        }
+        .content {
+            padding: 20px;
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="./assets/ProPic.jpg" alt="Profile Picture">
         <h1>Wethmi Ranasinghe</h1>
         <p>Computer Engineering Undergraduate | Nature Lover | Software Developer</p>
     </header>
@@ -53,7 +79,8 @@
     </nav>
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm Wethmi Ranasinghe, a Computer Engineering undergraduate at the University of Peradeniya. I have a passion for software development, research, and learning new things. I also engage in social work and love to spend time in nature.</p>
+        <p>Hello! I'm Wethmi Ranasinghe, a passionate Computer Engineering undergraduate, driven by a profound enthusiasm for research and continuous learning. 
+I believe in the power of hard work and am dedicated to making meaningful contributions through my efforts. Additionally, I like to engage in social work, aiming to use my abilities to give back to the community and make a positive impact on the world.</p>
     </section>
     <section id="projects">
         <h2>Projects</h2>
@@ -70,8 +97,8 @@
     </section>
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:wethmi@example.com">wethmi@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/wethmi-ranasinghe">linkedin.com/in/wethmi-ranasinghe</a></p>
+        <p>Email: <a href="mailto:wethmiranasinghe@gmail.com">wethmiranasinghe@gmail.com</a></p>
+        <p>LinkedIn: <a href="www.linkedin.com/in/rawl-ranasinghe">www.linkedin.com/in/rawl-ranasinghe</a></p>
     </section>
     <footer>
         <p>&copy; 2024 Wethmi Ranasinghe. All rights reserved.</p>
