@@ -14,13 +14,15 @@
             color: #333;
         }
         header {
-            background: #001044;
             color: #fff;
             padding: 10px 0;
             text-align: center;
             overflow: hidden;
             position: relative;
             background-image: url('/assets/background.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Place the background behind the content */
         }
         <!-- header::after {
             content: "";
@@ -32,7 +34,6 @@
             background-image: url('/assets/background.jpg');
             background-size: cover;
             background-position: center;
-            opacity: 0.5; /* Adjust this value to change the transparency */
             z-index: -1; /* Place the background behind the content */
         } -->
         header img {
