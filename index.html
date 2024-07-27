@@ -103,10 +103,20 @@
         }
         .container {
             display: flex;
-            background-color: #13173b; 
-            justify-content: space-around; /* Space out the cards evenly */
-            flex-wrap: wrap; /* Ensure cards wrap on smaller screens */
-            margin: 20px 0px;
+            flex-wrap: wrap;
+            margin: 20px 0; /* Vertical margin around the container */
+        }
+        .card-container {
+            background-color: #13173b;
+            color: #e0e0e0;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1 1 calc(50% - 40px); /* Take up 50% width minus margins */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
         }
         .info {
             flex: 1;
@@ -221,7 +231,7 @@ I believe in the power of hard work and am dedicated to making meaningful contri
     <section id="leadership">
         <h2>LEADERSHIP & VOLUNTEERING</h2>
         <div class="container">
-        <div class="card" onclick="location.href='https://ieee.soc.pdn.ac.lk/chapters/wie';">
+        <div class="card-container" onclick="location.href='https://ieee.soc.pdn.ac.lk/chapters/wie';">
             <img src="./assets/wieLogo.jpg" alt="WIEUniversityOfPeradeniya">
             <div class="info">
                 <h3>Assistant Secretary</h3>
@@ -231,7 +241,7 @@ I believe in the power of hard work and am dedicated to making meaningful contri
                 </p>
             </div>
         </div>
-        <div class="card" onclick="location.href='https://jiy.iesl.lk/';">
+        <div class="card-container" onclick="location.href='https://jiy.iesl.lk/';">
                 <img src="./assets/jiy.jpg" alt="IESL JIY">
                 <div class="info">
                     <h3>Committee Member</h3>
@@ -242,7 +252,7 @@ I believe in the power of hard work and am dedicated to making meaningful contri
         </div>
         </div>
         <div class="container">
-            <div class="card" onclick="location.href='https://www.aerogenz.com/home';">
+            <div class="card-container" onclick="location.href='https://www.aerogenz.com/home';">
                 <img src="./assets/aerogenz_uop_logo.jpg" alt="aerogenz_uop_logo">
                 <div class="info">
                     <h3>Membership Chair</h3>
@@ -252,7 +262,7 @@ I believe in the power of hard work and am dedicated to making meaningful contri
                     </p>
                 </div>
             </div>
-            <div class="card" onclick="location.href='https://rotaract.soc.pdn.ac.lk/';">
+            <div class="card-container" onclick="location.href='https://rotaract.soc.pdn.ac.lk/';">
                     <img src="./assets/Rota.jpg" alt="RoteractLogo">
                     <div class="info">
                         <h3>Rotaractor</h3>
