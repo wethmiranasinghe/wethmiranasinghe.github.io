@@ -3,27 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OceanEyes - Sea Pollution Detection</title>
+    <title>Wethmi Ranasinghe - Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;300;400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <script defer src="script.js"></script>
     <style>
         body {
             font-family: 'Roboto Condensed', Arial, Helvetica;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
-            transition: background-color 0.5s, color 0.5s;
+            padding-top: 50px;
+            background-color: #0f122a; /* Dark background for dark mode */
+            color: #e0e0e0; /* Light text color for readability */
+        }
+        body a {
+            color: #61acd1;
         }
         header {
-            background: #0077b6;
-            color: white;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            color: #e0e0e0; /* Light text color */
+            padding: 10px 0;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            background-image: url('/assets/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background */
+            z-index: 1; /* Place the background behind the content */
         }
         header img {
             width: 200px;
@@ -33,149 +41,266 @@
             margin: 0 auto;
             border: 5px solid #0f122a; /* Light border for profile image */
         }
+        header h1 {
+            font-family: 'Roboto Condensed', sans-serif; /* Apply the new font */
+            font-weight: 300; /* Light weight */
+            margin: 10px 0 0;
+            font-size: 5em;
+        }
+        header p {
+            font-size: 1em;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        .social-icons {
+            margin-top: 10px;
+            position: relative; /* Ensure positioning is relative within the header */
+            z-index: 2; /* Ensure icons are above other header content */
+        }
+        .social-icons a {
+            color: #e0e0e0; /* Light icon color */
+            margin: 0 10px;
+            font-size: 1.5em; /* Icon size */
+            text-decoration: none;
+            transition: color 0.3s; /* Smooth color transition */
+            display: inline-block; /* Ensure icons align correctly */
+        }
+        .social-icons a:hover {
+            color: #a0a0a0; /* Change color on hover */
+        }
         nav {
             display: flex;
-            gap: 15px;
+            justify-content: right;
+            padding: 10px;
+            background: #13173b; /* Darker background for nav */
+            color: #e0e0e0; /* Light text color */
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Ensure the nav bar stays on top of other content */
         }
         nav a {
-            color: white;
+            color: #e0e0e0; /* Light text color */
+            margin: 0 15px;
             text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s;
+            font-weight: 700;
         }
-        nav a:hover {
-            color: #00b4d8;
-        }
-        #hero {
-            background-image: url('/assets/background.jpg');
-            background-size: cover;
-            background-position: center;
-            padding: 100px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
+        section {
             padding: 20px;
         }
-        .feature {
-            background: #00b4d8;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        .feature:hover {
-            transform: scale(1.05);
-        }
-        .team-member {
+        .card {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin: 10px;
+            background-color: #13173b; 
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
         }
-        .team-member img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+        .card:hover {
+            transform: scale(1.02);
+        }
+        .card img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .info {
+            flex: 1;
+        }
+        .info h3 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .info p {
+            margin: 10px 0 0;
+            font-size: 1em;
         }
         footer {
-            background: #0077b6;
-            color: white;
+            text-align: center;
             padding: 10px;
-            margin-top: 20px;
+            background: #1f1f1f; /* Dark background for footer */
+            color: #e0e0e0; /* Light text color */
+        }  
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 0.5em;
+            }
+            header img {
+                width: 150px;
+                height: 150px;
+                border: 4px solid #0f122a; /* Light border for profile image */
+            }
+            nav {
+                padding: 5px;
+            }
+            nav a {
+                font-size: 1ex;
+                margin: 0 10px;
+                font-weight: 700px;
+            }
+            .card {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%; /* Make cards full-width on smaller screens */
+                
+            }
+            .card img {
+                margin: 0 0 20px;
+            }
         }
-        button {
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            background: #00b4d8;
-            color: white;
-            font-size: 16px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background: #023e8a;
+        .content {
+            padding: 20px;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <b>
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#experience">EXPERIENCE</a>
+        <a href="#leadership">LEADERSHIP</a>
+        <a href="#education">EDUCATION</a>
+        <a href="#contact">CONTACT</a>
+        </b>
+    </nav>
     <header>
-        <h1>OceanEyes</h1>
-        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=sN_3vdVXVIc" frameborder="0" allowfullscreen> </iframe>
-        <nav>
-            <a href="#hero">Home</a>
-            <a href="#features">Introduction</a>
-            <a href="#features">Features</a>
-            <a href="#features">Solution Architecture</a>
-            <a href="#features">Data Flow</a>
-            <a href="#team">Team</a>
-            <a href="#team">Conclusion</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <img src="./assets/ProPic.jpg" alt="Profile Picture">
+        <h1>WETHMI RANASINGHE</h1>
+        <p>COMPUTER ENGINEERING UNDERGRADUATE | NATURE ENTHUSIAST</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/rawl-ranasinghe" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/wethmi__/?hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/wethmi.ranasinghe.3/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://github.com/wethmiranasinghe" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
     </header>
-
-    <section id="hero">
-        <h2>Protecting Our Oceans with Technology</h2>
-        <p>Real-time pollution detection and sea state monitoring</p>
+    <section id="about">
+        <h2>ABOUT</h2>
+        <p>I am a passionate undergraduate, driven by a profound enthusiasm for research and continuous learning. 
+I believe in the power of hard work and am dedicated to making meaningful contributions through my efforts. Additionally, I like to engage in social work, aiming to use my abilities to give back to the community and make a positive impact on the world.</p>
     </section>
-
-    <section id="features">
-        <h2>Key Features</h2>
-        <div class="feature-grid">
-            <div class="feature">Pollution Detection</div>
-            <div class="feature">Sea State Monitoring</div>
-            <div class="feature">Autonomous Navigation</div>
-            <div class="feature">Data Accessibility</div>
-            <div class="feature">Environmental Impact</div>
+    <section id="projects">
+        <h2>PROJECTS</h2>
+        <div class="card" onclick="location.href='https://github.com/wethmiranasinghe/e20-co225-Erasmus-plus-Project-Web-and-MIS';">
+            <img src="./assets/Erasmus.jpg" alt="Erasmus+ Project Web and MIS">
+            <div class="info">
+                <h3>Erasmus+ Project Web and MIS</h3>
+                <p>A software solution designed to serve as a centralized platform for stakeholders involved in Erasmus+ projects to collaborate, track progress, manage documents, and facilitate communication.
+                    Languages used: Java, JavaScript, CSS, HTML</p>
+            </div>
         </div>
-    </section>
-
-    <section id="team">
-        <h2>Meet the Team</h2>
-        <div class="team-member">
-            <img src="wethmi.jpg" alt="Wethmi Ranasinghe">
-            <p>Wethmi Ranasinghe - E/20/316</p>
-        </div>
-        <div class="team-member">
-            <img src="rashmi.jpg" alt="Rashmi Gunathilake">
-            <p>Rashmi Gunathilake - E/20/122</p>
-        </div>
-        <div class="team-member">
-            <img src="dulanga.jpg" alt="Dulanga Jayawardena">
-            <p>Dulanga Jayawardena - E/20/178</p>
-        </div>
-        <div class="team-member">
-            <img src="kasundie.jpg" alt="Kasundie Hewawasam">
-            <p>Kasundie Hewawasam - E/20/148</p>
+        <div class="card" onclick="location.href='https://github.com/wethmiranasinghe/single-cycle-processor';">
+            <img src="./assets/Project2.png" alt="Single Cycle Processor">
+            <div class="info">
+                <h3>Single Cycle Processor</h3>
+                <p>A simple 8-bit single-cycle processor with a memory sub-system designed using Verilog HDL.</p>
+            </div>
         </div>
     </section>
-
+    <section id="experience">
+        <h2>EXPERIENCE</h2>
+        <div class="card" onclick="location.href='https://www.pdn.ac.lk/';">
+            <img src="./assets/university-of-peradeniya-logo.png" alt="UniversityOfPeradeniya">
+            <div class="info">
+                <h3>Undergraduate Teaching Assistant</h3>
+                <p>Department of Computer Engineering<br>
+                    University of Peradeniya<br>
+                    Feb 2024 - Present<br>
+                    Currently serving as a Casual Instructor for the GP106 - Computing course tailored for the first-year undergraduate students 
+                </p>
+            </div>
+    </section>
+    <section id="leadership">
+        <h2>LEADERSHIP & VOLUNTEERING</h2>
+        <div class="card" onclick="location.href='https://ieee.soc.pdn.ac.lk/chapters/wie';">
+            <img src="./assets/wieLogo.jpg" alt="WIEUniversityOfPeradeniya">
+            <div class="info">
+                <h3>Assistant Secretary</h3>
+                <p>IEEE WIE Student Branch Affinity Group<br>
+                    University of Peradeniya<br>
+                    Jan 2024 - Present
+                </p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='https://jiy.iesl.lk/';">
+                <img src="./assets/jiy.jpg" alt="IESL JIY">
+                <div class="info">
+                    <h3>Committee Member</h3>
+                    <p>IESL Junior Inventor of the Year (IESL-JIY)<br>
+                        Aug 2023 - Present 
+                    </p>
+                </div>
+        </div>
+            <div class="card" onclick="location.href='https://www.aerogenz.com/home';">
+                <img src="./assets/aerogenz_uop_logo.jpg" alt="aerogenz_uop_logo">
+                <div class="info">
+                    <h3>Membership Chair</h3>
+                    <p>AeroGenZ, Aviation Society<br>
+                        University of Peradeniya<br>
+                        Jul 2023 - Jun 2024 
+                    </p>
+                </div>
+            </div>
+            <div class="card" onclick="location.href='https://rotaract.soc.pdn.ac.lk/';">
+                    <img src="./assets/Rota.jpg" alt="RoteractLogo">
+                    <div class="info">
+                        <h3>Rotaractor</h3>
+                        <p>Rotaract Club<br>
+                           University of Peradeniya<br>
+                           Feb 2022 - Mar 2024
+                        </p>
+                    </div>
+            </div>
+            <div class="card" onclick="location.href='https://www.sasnaka.org/';">
+                <img src="./assets/Sasnaka.png" alt="SasnakaLogo">
+                <div class="info">
+                    <h3>Volunteer</h3>
+                    <p>Sasnaka Sansada Foundation<br>
+                       Mar 2021 - Dec 2023
+                    </p>
+                </div>
+        </div>
+    </section>
+    <section id="education">
+        <h2>EDUCATION</h2>
+        <div class="card" onclick="location.href='https://www.ce.pdn.ac.lk/';">
+            <img src="./assets/university-of-peradeniya-logo.png" alt="UniversityOfPeradeniya">
+            <div class="info">
+                <h3>University of Peradeniya</h3>
+                <p>May 2022 - July 2026<br>
+                    BSc Eng Hons. Computer Engineering<br>
+                    Current GPA 3.8/4.0<br>
+                    Core Courses (Computer Architecture, Computer Communication Networks, Software Construction, Database Systems, Embedded Systems, Data Structures & Algorithms, Network Security)</p>
+            </div>
+        </div>
+        <div class="card" onclick="location.href='https://www.kandyghs.sch.lk/';">
+            <img src="./assets/GirlsHighSchoolLogo.jpg" alt="GirlsHighSchool">
+            <div class="info">
+                <h3>K/Girls' High School Kandy</h3>
+                <p>May 2018 - December 2020<br>
+                   GCE AL (Advanced Level) examination. Mathematics A, Physics A, Chemistry A. z score 2.20, National rank 543 (30,000+ students) (2020)</p>
+            </div>
+        </div>
+    </section>
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: oceaneyes@eng.pdn.ac.lk</p>
+        <h2>CONTACT ME</h2>
+        <p>Email: <a href="mailto:wethmiranasinghe@gmail.com">wethmiranasinghe@gmail.com</a></p>
     </section>
-
     <footer>
-        <p>&copy; 2025 OceanEyes Project | University of Peradeniya</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/rawl-ranasinghe" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/wethmi__/?hl=en" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/wethmi.ranasinghe.3/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://github.com/wethmiranasinghe" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2024 Wethmi Ranasinghe. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.getElementById('theme-toggle').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-        });
-        
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(event) {
-                event.preventDefault();
-                const section = document.querySelector(this.getAttribute('href'));
-                section.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
 </body>
 </html>
